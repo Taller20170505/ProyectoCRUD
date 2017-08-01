@@ -4,15 +4,7 @@
     Author     : Wilfredo
 --%>
 
-<%-- 
-    Document   : crudProfesor
-    Created on : 27-07-2017, 12:17:01
-    Author     : Wilfredo 
-jfjfjfj
---%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="cl.valorunico.model.ProfesorDAO"%>
-<%@page import="cl.valorunico.entidy.Profesor"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -45,26 +37,7 @@ jfjfjfj
                     <th>Apellido</th>
                 </tr>
             </thead>
-            <tbody>
-                <%
-
-                  ArrayList<Profesor> lista = (ArrayList<Profesor>) ProfesorDAO.getlist();
-                          
-                    if (lista.size() > 0) {
-
-                        for (Profesor profe : lista) {
-                            out.print("<table>");
-                            out.print("<tr>");
-                            out.print("<td>" + profe.getIdprofesor() + "</td>");
-                            out.print("<td>" + profe.getNombre() + "</td>");
-                            out.print("<td>" + profe.getApellido() + "</td>");
-                            out.print("</tr>");
-                            out.print("</table>");
-                        }
-                    } else {
-                        out.print("No hay Profesores");
-                    }
-                %>
+            
 
             </tbody>
         </table>    
